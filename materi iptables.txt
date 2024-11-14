@@ -1,1 +1,18 @@
 https://phoenixnap.com/kb/iptables-linux
+
+berdasarkan ip address 
+iptables -A INPUT -s <ip add> -j ACCEPT
+iptables -A OUTPUT -d <ip add> -j DROP
+
+berdasarkan interface
+iptables -A INPUT -i <nameinterface> -j ACCEPT
+
+berdasarkan port dan protocol
+iptables -A INPUT -p <tcp,udp,icmp> dport <port> -j ACCEPT
+
+berdasarkan mac
+iptables -A INPUT -m mac --mac <mac add> -j ACCEPT
+
+iptables -F
+iptables -L line-number
+iptables -D <number>
