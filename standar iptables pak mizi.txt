@@ -4,8 +4,8 @@ systemctl enable netfilter-persistent
 netfilter-persistent save 
 	
 standar iptables
-1.forward drop
-2.input drop 
+1.iptables -A forward drop
+2.iptables -A input drop 
 3.loopback accept (iptables -A INPUT -i lo -j ACCEPT)
 4.biar tidak memakan resource yang banyak ( iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT)
  
