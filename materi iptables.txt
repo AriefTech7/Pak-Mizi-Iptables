@@ -14,5 +14,5 @@ berdasarkan mac
 iptables -A INPUT -m mac --mac <mac add> -j ACCEPT
 
 iptables -F
-iptables -L line-number
+iptables -L --line-number
 iptables -D <number>
