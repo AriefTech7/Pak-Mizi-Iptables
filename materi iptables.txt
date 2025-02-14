@@ -8,7 +8,7 @@ berdasarkan interface
 iptables -A INPUT -i <nameinterface> -j ACCEPT
 
 berdasarkan port dan protocol
-iptables -A INPUT -p <tcp,udp,icmp> dport <port> -j ACCEPT
+iptables -A INPUT -p <tcp,udp,icmp> --dport <port> -j ACCEPT
 
 berdasarkan mac
 iptables -A INPUT -m mac --mac <mac add> -j ACCEPT
